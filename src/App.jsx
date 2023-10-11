@@ -1,12 +1,11 @@
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import viteLogo from './assets/vite.svg'
 import './App.scss'
-import { useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
-import axios from "axios";
+import axios from "axios"
+import { redirect } from 'react-router-dom'
 
 function App() {
-  const navigate = useNavigate()
   const { register, handleSubmit, formState: { errors } } = useForm()
   const baseURL = 'https://reqres.in'
 
@@ -17,7 +16,7 @@ function App() {
         password: data.password,
       })
       .then((response) => {
-        navigate('/homePage')
+        return redirect('/homePage')
       })
       .catch((error) => {
         alert(error.response.data.error)
@@ -34,13 +33,16 @@ function App() {
           <img src={reactLogo} className='logo react' alt='React logo' />
         </a>
       </div>
-      <h1>Byron's React Concepts Practice</h1>
+      <h1>React Concepts Practice</h1>
 
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <input {...register('email', { required: true })} />
+      <p>This form was created using react hook form and axios.</p>
+      <p><a href="https://reqres.in/" target='_blank'>Reqres</a> was the API used.</p>
+
+      <form onSubmit={handleSubmit(onSubmit)} data-testid='login-form'>
+        <input {...register('email', { required: true })} placeholder='Email' />
         {errors.email && <><br /><span>This field is required ⬆️</span></>}
         <br />
-        <input {...register('password')} />
+        <input {...register('password')} placeholder='Password' />
         <br />
         <input type='submit' value='Login' />
       </form>

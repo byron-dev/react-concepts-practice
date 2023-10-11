@@ -1,11 +1,9 @@
 import React from 'react'
 import styles from './button.module.scss'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import { useNavigate } from 'react-router-dom'
+import viteLogo from './assets/vite.svg'
 
 function HomePage() {
-    const navigate = useNavigate()
 
     return (
         <>
@@ -17,21 +15,27 @@ function HomePage() {
                     <img src={reactLogo} className='logo react' alt='React logo' />
                 </a>
             </div>
-            <h1>Byron's React Concepts Practice</h1>
+            <h1>React Concepts Practice</h1>
             <div className='card'>
-                <p>The first button was styled with a css module.</p>
-                <button className={styles.example} onClick={() => { navigate('/hocPractice') }}>
+                <p>The first a was styled with a css module.</p>
+                <p>To do that you create a scss file where you declare the style for example for a class:</p>
+                <p><code>{".example { background-color: #c3e2ef; }"}</code></p>
+                <p>then you import that module to the component:</p>
+                <p><code>{"import styles from './a.module.scss'"}</code></p>
+                <p>and then you used that class in you className attribute</p>
+                <p><code>{"<a className={styles.example} "}</code></p>
+                <a className={styles.example} href='/hocPractice'>
                     High Order Components
-                </button>
-                <button onClick={() => { navigate('/styledComponentsPractice') }}>
+                </a>
+                <a href='/styledComponentsPractice'>
                     Styled Components
-                </button>
-                <button onClick={() => { navigate('/hooksPractice') }}>
+                </a>
+                <a href='/hooksPractice'>
                     React Hooks
-                </button>
-                <button onClick={() => { navigate('/portalPractice') }}>
+                </a>
+                <a href='/portalPractice'>
                     React Portals
-                </button>
+                </a>
             </div>
         </>
 
