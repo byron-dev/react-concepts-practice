@@ -14,10 +14,16 @@ function HOCComponents() {
             <br />
             <p>This is a way to re-use logic by injecting props (variables or methods) from a modifier
                 component (the HOC) to the required component.</p>
-            <p>We create a function that takes a component (the one we want to modify) as parameter and creates
-                another component with custom logic which is passed to the component to modify as props.</p>
-            <p>In this case we are sharing the state and the function to update that state without sharing the values.
-                So, both buttons work independently.</p>
+            <p>We created a function that takes a component (the one we want to modify) as parameter and creates
+                another component with custom logic which is passed as props to the component we want to modify.</p>
+            <p>In <code>src/HOCComponents.jsx</code>, we use the function <code>modifierComponent</code> that takes an original component as
+                parameter and then returns that same component but with the counter and the function to update it injected to it.</p>
+            <p>In that way, we can create two components <code>PeopleCounter</code> and <code>CoupleCounter</code> and passed
+                them to the <code>modifierComponent</code> to reuse its logic without sharing the state between the two components.</p>
+            <p>Here is an example: ⬇️</p>
+            <p><span>Note:</span></p>
+            <p>Check that the <code>modifierComponent</code> function has a function component to create the HOC, but it also
+                has in comments the code to create a HOC with a class component.</p>
             <PeopleCounter />
             <CoupleCounter />
         </>

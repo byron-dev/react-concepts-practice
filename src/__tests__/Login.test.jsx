@@ -1,9 +1,10 @@
 import React from "react";
-import App from "../App";
+import Login from "../Login";
 import { fireEvent, render } from "@testing-library/react";
+import { BrowserRouter } from "react-router-dom";
 
 it('Should show a form with email and password fields', () => {
-    const { queryByTestId, queryByPlaceholderText } = render(<App />)
+    const { queryByTestId, queryByPlaceholderText } = render(<BrowserRouter><Login /></BrowserRouter>)
 
     expect(queryByTestId('login-form')).toBeTruthy()
     expect(queryByPlaceholderText('Email')).toBeTruthy()
@@ -11,7 +12,7 @@ it('Should show a form with email and password fields', () => {
 })
 
 it('Should display text on inputs', () => {
-    const { queryByPlaceholderText } = render(<App />)
+    const { queryByPlaceholderText } = render(<BrowserRouter><Login /></BrowserRouter>)
 
     const emailField = queryByPlaceholderText('Email')
 
