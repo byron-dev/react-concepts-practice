@@ -48,6 +48,12 @@ function HomePage() {
                     <a className='btn' href='/storyBookPractice'>
                         StoryBook
                     </a>
+                    <a className='btn' href='/refsExample'>
+                        Ref's
+                    </a>
+                    <a className='btn' href='/listsExample'>
+                        Lists
+                    </a>
                 </div>
                 <p><span>UNIT TESTING:</span></p>
                 <p>Go to <code>src/__tests__/Homepage.test.jsx</code> and <code>src/__tests__/Login.test.jsx</code> to see how unit tests are created.</p>

@@ -41,10 +41,11 @@ const CustomHookExample = () => {
                 Back to Home Page
             </button>
             <br />
+            <h1>React Hooks Example</h1>
             <p>To see this example, go to <code>src/HooksPractice.jsx</code>.</p>
-            <p>We defined <code>useOnlineStatus</code> hook in the same file just for the example, but it's better to
+            <p>We defined <code>useOnlineStatus</code> hook in the same file just for the example, but the best practice is to
                 have the hooks in a separate folder and files.</p>
-            <p>This function checks whether the user is connected to the internet or not, that way to can reuse this "state" login in many places in your app.</p>
+            <p>This function checks whether the user is connected to the internet or not, that way to can reuse this "state" in many places in your app.</p>
             <p>Turn off the internet to see the functionality.</p>
             <button className={styles.example} disabled={!isOnline} onClick={handleSaveClick}>
                 {isOnline ? 'Show alert' : 'Reconnecting...'}

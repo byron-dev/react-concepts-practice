@@ -7,6 +7,8 @@ import CustomHookExample from './HooksPractice'
 import PortalPractice from './PortalPractice'
 import { Routes, Route } from 'react-router-dom'
 import { Button } from './stories/Button'
+import RefsExample from './RefsExample'
+import Lists from './Lists'
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route exact path="/reactHooks" element={<CustomHookExample />} />
         <Route exact path="/reactPortals" element={<PortalPractice />} />
         <Route exact path="/storyBookPractice" element={<Button />} />
+        <Route exact path="/refsExample" element={<RefsExample />} />
+        <Route exact path="/listsExample" element={<Lists />} />
       </Routes>
     </>
   )

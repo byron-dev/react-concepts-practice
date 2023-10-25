@@ -13,6 +13,7 @@ export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
         Back to Home Page
       </button>
       <br />
+      <h1>Storybook Example</h1>
       <p>To see the storybook, run <code>npm run storybook</code> in the terminal and go to the returned URL.</p>
       <p>In the left hand menu, go to Example ➡️ Button.</p>
       <p>There you will see the Primary, Secondary, Large, and Small variants for the Button component.</p>

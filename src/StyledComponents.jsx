@@ -24,6 +24,7 @@ function StyledComponents() {
             <button onClick={() => { navigate('/homePage') }}>
                 Back to Home Page
             </button>
+            <h1>Styled Components</h1>
             <p>To see this example, go to <code>src/StyledComponents.jsx</code>.</p>
             <p>In that file, we created two styled components at the top: <code>Wrapper</code> that is a section and <code>Title</code> that is an H1</p>
             <p>The purple wrapper was styled based on a prop.</p>
